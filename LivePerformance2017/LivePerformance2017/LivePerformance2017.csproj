@@ -46,15 +46,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Database Access Layer\CoalitieSQLContext.cs" />
+    <Compile Include="Database Access Layer\PartijSQLContext.cs" />
+    <Compile Include="Database Access Layer\UitslagSQLContext.cs" />
+    <Compile Include="Presentation Layer\CoalitieRepository.cs" />
+    <Compile Include="Presentation Layer\PartijRepository.cs" />
+    <Compile Include="Presentation Layer\UitslagRepository.cs" />
+    <Compile Include="Presentation Layer\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Presentation Layer\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Models\Coalitie.cs" />
+    <Compile Include="Models\ImageFile.cs" />
+    <Compile Include="Models\Partij.cs" />
+    <Compile Include="Models\Textfile.cs" />
+    <Compile Include="Models\Uitdraai.cs" />
+    <Compile Include="Models\Uitslag.cs" />
+    <Compile Include="Startup Layer\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Presentation Layer\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -77,8 +89,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="Startup Layer\App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
