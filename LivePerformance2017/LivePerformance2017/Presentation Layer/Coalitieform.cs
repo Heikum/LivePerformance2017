@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LivePerformance2017
+namespace LivePerformance2017.Presentation_Layer
 {
-    public partial class Form1 : Form
+    public partial class Coalitieform : Form
     {
-        public Form1()
+        public Coalitieform()
         {
             InitializeComponent();
         }
