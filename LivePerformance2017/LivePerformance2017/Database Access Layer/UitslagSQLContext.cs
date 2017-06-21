@@ -105,11 +105,12 @@ namespace LivePerformance2017.Database_Access_Layer
             using (SqlConnection connectie = Database.Connection)
             {
                 SqlCommand cmd1 =
-                    new SqlCommand("INSERT INTO Stemmen (Zetels) values (@Zetels) where ID = @ID",
+                    new SqlCommand("update Stemmen SET Zetels = @Zetels where Uitslag_ID = @ID and Partij_ID = @PartijID; ",
                         connectie);
                 cmd1.CommandType = CommandType.Text;
                 cmd1.Connection = connectie;
                 cmd1.Parameters.AddWithValue("@Zetels", partij.Zetels1);
+                cmd1.Parameters.AddWithValue("@PartijID", partij.PartijId);
                 cmd1.Parameters.AddWithValue("@ID", uitslagID);
                 //nog para voor percentage 
                 cmd1.ExecuteNonQuery();

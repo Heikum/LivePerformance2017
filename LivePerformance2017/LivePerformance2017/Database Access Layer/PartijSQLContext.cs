@@ -14,6 +14,7 @@ namespace LivePerformance2017.Database_Access_Layer
     {
         public List<Partij> GetAllPartijen()
         {
+
             List<Partij> collectie = new List<Partij>();
             using (SqlConnection connectie = Database.Connection)
             {
@@ -54,11 +55,11 @@ namespace LivePerformance2017.Database_Access_Layer
             using (SqlConnection connectie = Database.Connection)
             {
                 SqlCommand cmd1 =
-                    new SqlCommand("DELETE FROM Partij where ID = @ID",
+                    new SqlCommand("EXECUTE Deletepartij @ID = @IDD; ",
                         connectie);
                 cmd1.CommandType = CommandType.Text;
                 cmd1.Connection = connectie;
-                cmd1.Parameters.AddWithValue("@ID", partij.PartijId);
+                cmd1.Parameters.AddWithValue("@IDD", partij.PartijId);
                 cmd1.ExecuteNonQuery();
                 return true;
             }
@@ -107,7 +108,7 @@ namespace LivePerformance2017.Database_Access_Layer
             List<Partij> collectie = new List<Partij>();
             using (SqlConnection connectie = Database.Connection)
             {
-                SqlCommand cmd = new SqlCommand("select * from Stemmen inner join Partij on Partij_ID = Partij.ID where Stemmen.ID = @ID", connectie);
+                SqlCommand cmd = new SqlCommand("select * from Stemmen inner join Partij on Partij_ID = Partij.ID where Uitslag_ID = @ID", connectie);
                 cmd.Parameters.AddWithValue("@id", id);
                 cmd.ExecuteNonQuery();
 
@@ -140,7 +141,8 @@ namespace LivePerformance2017.Database_Access_Layer
                 Convert.ToString(reader["VolledigeNaam"]),
                 Convert.ToString(reader["Kleur"]),
                 Convert.ToString(reader["Lijsttrekker"]),
-            Convert.ToInt32(reader["Stemmen"]));
+            Convert.ToInt32(reader["Stemmen"]),
+            Convert.ToInt32(reader["Zetels"]));
         }
     }
 }

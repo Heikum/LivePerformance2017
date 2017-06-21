@@ -8,7 +8,8 @@ namespace LivePerformance2017.Database_Access_Layer
 {
     public class Database
     {
-        private static readonly string connectionString = "Data Source=HICH-LAPTOP;Initial Catalog=LivePerformance;Integrated Security=True";
+        //private static readonly string connectionString = "Data Source=HICH-LAPTOP;Initial Catalog=LivePerformance;Integrated Security=True";
+        private static readonly string connectionString = "Server=mssql.fhict.local;Database=dbi353348;User Id=dbi353348;Password=loler123;";
         public static SqlConnection Connection
         {
             get

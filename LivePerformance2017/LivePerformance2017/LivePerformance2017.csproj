@@ -49,6 +49,7 @@
     <Compile Include="Business Layer\StemCalculator.cs" />
     <Compile Include="Database Access Layer\CoalitieSQLContext.cs" />
     <Compile Include="Database Access Layer\Database.cs" />
+    <Compile Include="Interfaces\ICoalitieSQLContext.cs" />
     <Compile Include="Interfaces\IUitslagSQLContext.cs" />
     <Compile Include="Interfaces\IPartijSQLContext.cs" />
     <Compile Include="Database Access Layer\PartijSQLContext.cs" />
@@ -59,7 +60,7 @@
     <Compile Include="Presentation Layer\Coalitieform.Designer.cs">
       <DependentUpon>Coalitieform.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Layer\CoalitieRepository.cs" />
+    <Compile Include="Business Layer\Repositorys\CoalitieRepository.cs" />
     <Compile Include="Presentation Layer\Partij\AddPartijform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,7 +73,7 @@
     <Compile Include="Presentation Layer\Partij\Partijform.Designer.cs">
       <DependentUpon>Partijform.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Layer\PartijRepository.cs" />
+    <Compile Include="Business Layer\Repositorys\PartijRepository.cs" />
     <Compile Include="Presentation Layer\Partij\Wijzigpartijform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,7 +86,7 @@
     <Compile Include="Presentation Layer\Uitslagform.Designer.cs">
       <DependentUpon>Uitslagform.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Layer\UitslagRepository.cs" />
+    <Compile Include="Business Layer\Repositorys\UitslagRepository.cs" />
     <Compile Include="Presentation Layer\Menuform.cs">
       <SubType>Form</SubType>
     </Compile>

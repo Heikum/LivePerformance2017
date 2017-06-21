@@ -28,12 +28,11 @@ namespace LivePerformance2017.Models
             set { Partijlijst = value; }
         }
 
-        public Coalitie(int uitslagID, string naam, string premier, List<Partij> partijlijst, int zetels)
+        public Coalitie(int uitslagID, string naam, string premier, int zetels)
         {
             UitslagID = uitslagID; 
             Naam = naam;
             Premier = premier;
-            Partijlijst = partijlijst;
             Zetels = zetels; 
         }
 
@@ -56,19 +55,10 @@ namespace LivePerformance2017.Models
             Zetels = zetels;
         }
 
-        public int Checkmeerderheid()
-        {
-            return 0; 
-        }
-
-        public string BepaalPremier()
-        {
-            return ""; 
-        }
 
         public override string ToString()
         {
-            return base.ToString();
+            return "Naam: " + Naam + ", Premier: " + Premier + ", Zetels: " + Zetels;
         }
 
 
