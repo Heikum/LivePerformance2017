@@ -11,5 +11,7 @@ namespace LivePerformance2017.Database_Access_Layer
         bool VerwijderPartij(Partij partij);
         bool WijzigPartij(int id, Partij partij);
         Partij CreatePartijFromReader(SqlDataReader reader);
+        List<Partij> GetAllPartijenvoorUitslag(int id);
+        int GetStemmen(int uitslagID, Partij partij);
     }
 }

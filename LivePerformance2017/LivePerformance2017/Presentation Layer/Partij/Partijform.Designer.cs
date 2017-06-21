@@ -71,6 +71,7 @@
             this.verwijderpartijbutton.TabIndex = 3;
             this.verwijderpartijbutton.Text = "Verwijder partij";
             this.verwijderpartijbutton.UseVisualStyleBackColor = true;
+            this.verwijderpartijbutton.Click += new System.EventHandler(this.verwijderpartijbutton_Click);
             // 
             // wijizigpartijbutton
             // 
@@ -80,6 +81,7 @@
             this.wijizigpartijbutton.TabIndex = 4;
             this.wijizigpartijbutton.Text = "Wijzig partij";
             this.wijizigpartijbutton.UseVisualStyleBackColor = true;
+            this.wijizigpartijbutton.Click += new System.EventHandler(this.wijizigpartijbutton_Click);
             // 
             // Partijform
             // 

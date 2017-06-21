@@ -31,7 +31,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.partijbutton = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.verkiezingbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button3
@@ -42,6 +42,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Uitslagen";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // partijbutton
             // 
@@ -62,21 +63,22 @@
             this.button5.Text = "Coalities";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // verkiezingbutton
             // 
-            this.button1.Location = new System.Drawing.Point(329, 140);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(280, 89);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Placeholder";
-            this.button1.UseVisualStyleBackColor = true;
+            this.verkiezingbutton.Location = new System.Drawing.Point(329, 140);
+            this.verkiezingbutton.Name = "verkiezingbutton";
+            this.verkiezingbutton.Size = new System.Drawing.Size(280, 89);
+            this.verkiezingbutton.TabIndex = 5;
+            this.verkiezingbutton.Text = "Verkiezing";
+            this.verkiezingbutton.UseVisualStyleBackColor = true;
+            this.verkiezingbutton.Click += new System.EventHandler(this.verkiezingbutton_Click);
             // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(678, 265);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.verkiezingbutton);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.partijbutton);
             this.Controls.Add(this.button3);
@@ -95,7 +97,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button partijbutton;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button verkiezingbutton;
     }
 }
 

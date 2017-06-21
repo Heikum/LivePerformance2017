@@ -47,6 +47,24 @@ namespace LivePerformance2017.Models
             Lijsttrekker = lijsttrekker;
         }
 
+        public Partij(int partijID, string naam, string volledigenaam, string kleur, string lijsttrekker, int stemmen)
+        {
+            PartijID = partijID;
+            Naam = naam;
+            VolledigeNaam = volledigenaam;
+            Kleur = kleur;
+            Lijsttrekker = lijsttrekker;
+            this.Stemmen = stemmen; 
+        }
+
+        public Partij(string naam, string volledigenaam, string kleur, string lijsttrekker)
+        {
+            Naam = naam;
+            VolledigeNaam = volledigenaam;
+            Kleur = kleur;
+            Lijsttrekker = lijsttrekker;
+        }
+
 
         public int BerekenZetels()
         {
@@ -55,7 +73,7 @@ namespace LivePerformance2017.Models
 
         public override string ToString()
         {
-            return "Naam: " + Naam + ", Lijsttrekker: " + Lijsttrekker; 
+            return "Naam: " + Naam + ", Lijsttrekker: " + Lijsttrekker + ", Stemmen: " + Stemmen; 
         }
     }
 }

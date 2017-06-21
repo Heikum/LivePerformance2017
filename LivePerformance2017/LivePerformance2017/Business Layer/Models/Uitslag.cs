@@ -8,12 +8,15 @@ namespace LivePerformance2017.Models
 {
     public class Uitslag
     {
+        
 
         private string Naam;
         private DateTime datum;
         private int ZetelAantal;
         private int AantalStemmen;
-        private int UitslagID; 
+        private int UitslagID;
+
+        public int UitslagId => UitslagID;
 
         public string Naam1 => Naam;
 
@@ -43,7 +46,7 @@ namespace LivePerformance2017.Models
 
         public override string ToString()
         {
-            return base.ToString();
+            return "Naam: " + Naam + ", Aantal zetels: " + ZetelAantal; 
         }
     }
 }

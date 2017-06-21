@@ -35,5 +35,15 @@ namespace LivePerformance2017.Models.Repositorys
             return context.WijzigPartij(id, partij); 
         }
 
+        public List<Partij> GetAllPartijenvoorUitslag(int id)
+        {
+            return context.GetAllPartijenvoorUitslag(id); 
+        }
+
+        public int GetStemmen(int uitslagID, Partij partij)
+        {
+            return context.GetStemmen(uitslagID, partij); 
+        }
+
     }
 }

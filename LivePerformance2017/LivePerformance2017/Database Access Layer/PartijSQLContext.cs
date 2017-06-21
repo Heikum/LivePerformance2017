@@ -84,6 +84,44 @@ namespace LivePerformance2017.Database_Access_Layer
             }
         }
 
+        public int GetStemmen(int uitslagID, Partij partij)
+        {
+            using (SqlConnection connectie = Database.Connection)
+            {
+                SqlCommand cmd1 =
+                    new SqlCommand(
+                        @"select Stemmen from Stemmen where Partij_ID = @PartijID AND Uitslag_ID = @ID",
+                        connectie);
+                cmd1.CommandType = CommandType.Text;
+                cmd1.Connection = connectie;
+                cmd1.Parameters.AddWithValue("@ID", uitslagID);
+                cmd1.Parameters.AddWithValue("@PartijID", partij.PartijId);
+                int result = Convert.ToInt32(cmd1.ExecuteScalar());
+                return result;
+            }
+        }
+
+
+        public List<Partij> GetAllPartijenvoorUitslag(int id)
+        {
+            List<Partij> collectie = new List<Partij>();
+            using (SqlConnection connectie = Database.Connection)
+            {
+                SqlCommand cmd = new SqlCommand("select * from Stemmen inner join Partij on Partij_ID = Partij.ID where Stemmen.ID = @ID", connectie);
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.ExecuteNonQuery();
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        collectie.Add(CreatePartijMetStemmenFromReader(reader));
+                    }
+                }
+            }
+            return collectie;
+        }
+
         public Partij CreatePartijFromReader(SqlDataReader reader)
         {
             return new Partij(
@@ -92,6 +130,17 @@ namespace LivePerformance2017.Database_Access_Layer
                 Convert.ToString(reader["VolledigeNaam"]),
                 Convert.ToString(reader["Kleur"]),
                 Convert.ToString(reader["Lijsttrekker"]));
+        }
+
+        public Partij CreatePartijMetStemmenFromReader(SqlDataReader reader)
+        {
+            return new Partij(
+                Convert.ToInt32(reader["ID"]),
+                Convert.ToString(reader["Naam"]),
+                Convert.ToString(reader["VolledigeNaam"]),
+                Convert.ToString(reader["Kleur"]),
+                Convert.ToString(reader["Lijsttrekker"]),
+            Convert.ToInt32(reader["Stemmen"]));
         }
     }
 }

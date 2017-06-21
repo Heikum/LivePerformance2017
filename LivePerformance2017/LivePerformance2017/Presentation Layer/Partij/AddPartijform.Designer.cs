@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbpartijnaam = new System.Windows.Forms.TextBox();
+            this.tbvolledigepartijnaam = new System.Windows.Forms.TextBox();
+            this.tbpartijkleur = new System.Windows.Forms.TextBox();
+            this.tbpartijlijsttrekker = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,37 +41,37 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tbpartijnaam
             // 
-            this.textBox1.Location = new System.Drawing.Point(210, 23);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(218, 42);
-            this.textBox1.TabIndex = 0;
+            this.tbpartijnaam.Location = new System.Drawing.Point(210, 23);
+            this.tbpartijnaam.Multiline = true;
+            this.tbpartijnaam.Name = "tbpartijnaam";
+            this.tbpartijnaam.Size = new System.Drawing.Size(218, 42);
+            this.tbpartijnaam.TabIndex = 0;
             // 
-            // textBox2
+            // tbvolledigepartijnaam
             // 
-            this.textBox2.Location = new System.Drawing.Point(210, 71);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(218, 42);
-            this.textBox2.TabIndex = 1;
+            this.tbvolledigepartijnaam.Location = new System.Drawing.Point(210, 71);
+            this.tbvolledigepartijnaam.Multiline = true;
+            this.tbvolledigepartijnaam.Name = "tbvolledigepartijnaam";
+            this.tbvolledigepartijnaam.Size = new System.Drawing.Size(218, 42);
+            this.tbvolledigepartijnaam.TabIndex = 1;
             // 
-            // textBox3
+            // tbpartijkleur
             // 
-            this.textBox3.Location = new System.Drawing.Point(210, 119);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(218, 42);
-            this.textBox3.TabIndex = 2;
+            this.tbpartijkleur.Location = new System.Drawing.Point(210, 119);
+            this.tbpartijkleur.Multiline = true;
+            this.tbpartijkleur.Name = "tbpartijkleur";
+            this.tbpartijkleur.Size = new System.Drawing.Size(218, 42);
+            this.tbpartijkleur.TabIndex = 2;
             // 
-            // textBox4
+            // tbpartijlijsttrekker
             // 
-            this.textBox4.Location = new System.Drawing.Point(210, 167);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(218, 42);
-            this.textBox4.TabIndex = 3;
+            this.tbpartijlijsttrekker.Location = new System.Drawing.Point(210, 167);
+            this.tbpartijlijsttrekker.Multiline = true;
+            this.tbpartijlijsttrekker.Name = "tbpartijlijsttrekker";
+            this.tbpartijlijsttrekker.Size = new System.Drawing.Size(218, 42);
+            this.tbpartijlijsttrekker.TabIndex = 3;
             // 
             // label1
             // 
@@ -113,12 +113,12 @@
             // 
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.tbpartijnaam);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.tbvolledigepartijnaam);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.tbpartijkleur);
+            this.groupBox1.Controls.Add(this.tbpartijlijsttrekker);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(441, 230);
@@ -133,6 +133,7 @@
             this.addpartijbutton.TabIndex = 11;
             this.addpartijbutton.Text = "Voeg toe";
             this.addpartijbutton.UseVisualStyleBackColor = true;
+            this.addpartijbutton.Click += new System.EventHandler(this.addpartijbutton_Click);
             // 
             // AddPartijform
             // 
@@ -154,10 +155,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbpartijnaam;
+        private System.Windows.Forms.TextBox tbvolledigepartijnaam;
+        private System.Windows.Forms.TextBox tbpartijkleur;
+        private System.Windows.Forms.TextBox tbpartijlijsttrekker;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
