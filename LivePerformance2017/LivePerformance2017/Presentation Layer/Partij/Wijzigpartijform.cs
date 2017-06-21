@@ -27,7 +27,7 @@ namespace LivePerformance2017.Presentation_Layer.Partij
             tbpartijlijsttrekker.Text = selectedpartij.Lijsttrekker1; 
 
         }
-
+        //Wijzigt politieke partij 
         private void wijzigpartijbutton_Click(object sender, EventArgs e)
         {
             try

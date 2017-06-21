@@ -26,8 +26,7 @@ namespace LivePerformance2017
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Uitslagform uitslagform = new Uitslagform();
-            uitslagform.Show();
+
         }
 
         private void verkiezingbutton_Click(object sender, EventArgs e)

@@ -10,7 +10,7 @@ namespace LivePerformance2017.Models
 {
     public class Uitdraai
     {
-
+        //Exporteert coalitie als een tekstbestand op de door de user ingegeven path 
         public void ExporteerCoalitie(Coalitie coalitie, string path)
         {
             List<string> lines = new List<string>();

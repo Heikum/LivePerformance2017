@@ -39,14 +39,14 @@ namespace LivePerformance2017.Presentation_Layer
             Models.Partij partijpremier = partijlist.OrderBy(item => item.Zetels1).First();
             return partijpremier.Lijsttrekker1; 
         }
-
+        //Update listboxes zodra er verandering is op geklikte item
         private void lbverkiezingen_SelectedIndexChanged(object sender, EventArgs e)
         {
             Uitslag selecteduitslag = (Uitslag)lbverkiezingen.SelectedItem;
             lbcoalitie.DataSource = crepo.GetSpecificCoalities(selecteduitslag.UitslagId);
             checkedlbpartijen.DataSource = prepo.GetAllPartijenvoorUitslag(selecteduitslag.UitslagId);
         }
-
+        //Update listboxes zodra er verandering is op geklikte item
         private void lbcoalitie_SelectedIndexChanged(object sender, EventArgs e)
         {
             Coalitie selectedcoalitie = (Coalitie)lbcoalitie.SelectedItem;
@@ -56,9 +56,10 @@ namespace LivePerformance2017.Presentation_Layer
 
         private void button2_Click(object sender, EventArgs e)
         {
-            label9.Text = GetPremier(prepo.GetAllPartijen()); 
+             
         }
 
+        //Maakt coalitie aan in database
         private void btmaakcoalitie_Click(object sender, EventArgs e)
         {
             try
@@ -85,6 +86,8 @@ namespace LivePerformance2017.Presentation_Layer
                     {
                         crepo.CreateCoalitieMetPartij(partij, coalitieid);
                     }
+
+                     
                 }
                 
             }
@@ -93,7 +96,7 @@ namespace LivePerformance2017.Presentation_Layer
                 MessageBox.Show("Er is een fout opgetreden: " + exception); 
             }
         }
-
+        //Exporteert de coalitie naar een .txt bestand op de gekozen locatie 
         private void exportbutton_Click(object sender, EventArgs e)
         {
             try

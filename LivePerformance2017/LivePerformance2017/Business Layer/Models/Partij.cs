@@ -10,11 +10,19 @@ namespace LivePerformance2017.Models
     {
         private int PartijID;
         private string Naam;
+
         private string VolledigeNaam;
         private string Kleur;
         private string Lijsttrekker;
         private int Stemmen;
         private int Zetels;
+
+
+        public string Naam1
+        {
+            get { return Naam; }
+            set { Naam = value; }
+        }
 
         public int Stemmen1
         {
@@ -30,7 +38,6 @@ namespace LivePerformance2017.Models
 
         public int PartijId => PartijID;
 
-        public string Naam1 => Naam;
 
         public string VolledigeNaam1 => VolledigeNaam;
 

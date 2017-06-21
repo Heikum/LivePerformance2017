@@ -80,12 +80,6 @@
     <Compile Include="Presentation Layer\Partij\Wijzigpartijform.Designer.cs">
       <DependentUpon>Wijzigpartijform.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Layer\Uitslagform.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation Layer\Uitslagform.Designer.cs">
-      <DependentUpon>Uitslagform.cs</DependentUpon>
-    </Compile>
     <Compile Include="Business Layer\Repositorys\UitslagRepository.cs" />
     <Compile Include="Presentation Layer\Menuform.cs">
       <SubType>Form</SubType>
@@ -94,10 +88,8 @@
       <DependentUpon>Menuform.cs</DependentUpon>
     </Compile>
     <Compile Include="Business Layer\Models\Coalitie.cs" />
-    <Compile Include="Business Layer\Models\ImageFile.cs" />
     <Compile Include="Business Layer\Models\Partij.cs" />
-    <Compile Include="Business Layer\Models\Textfile.cs" />
-    <Compile Include="Business Layer\Models\Uitdraai.cs" />
+    <Compile Include="Business Layer\Uitdraai.cs" />
     <Compile Include="Business Layer\Models\Uitslag.cs" />
     <Compile Include="Presentation Layer\Verkiezingform.cs">
       <SubType>Form</SubType>
@@ -127,9 +119,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\Partij\Wijzigpartijform.resx">
       <DependentUpon>Wijzigpartijform.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layer\Uitslagform.resx">
-      <DependentUpon>Uitslagform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\Verkiezingform.resx">
       <DependentUpon>Verkiezingform.cs</DependentUpon>
